@@ -1,7 +1,7 @@
 (function(exports){
 
-  function singleNote(note) {
-    this.text = note
+  function singleNote(noteText) {
+    this.text = noteText
   };
 
   singleNote.prototype.showText = function() {
