@@ -1,16 +1,17 @@
 (function(exports){
 
   function noteList() {
-     this.notes = [];
+    this.notes = [];
   };
 
   noteList.prototype.showNote = function() {
-    //  console.log(this.notes)
+    // console.log(this.notes);
     return this.notes;
   };
 
-  noteList.prototype.saveNote = function(note){
-    this.notes.push(note);
+  noteList.prototype.newNote = function(note){
+    this.note = note
+    this.notes.push(this.note);
   };
 
   noteList.prototype.findANote = function(words) {

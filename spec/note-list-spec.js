@@ -5,7 +5,7 @@ function UnitTestSuite() {
     // notelist.notes.push(note.showText());
 
     function savesNoteToNotes() {
-      notelist.saveNote(note);
+      notelist.newNote(note);
       assert.isTrue(notelist.notes.includes(note))
       if (assert){console.log("savesNoteToNotes: PASSED!!!!")};
     };
