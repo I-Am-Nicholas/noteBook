@@ -2,16 +2,11 @@
 
   function noteListView() {
     this.html1 = [];
-    this.html2 = [];
   };
 
-  noteListView.prototype.viewNoteList = function(listOfNotes) {
-    console.log("listOfNotes: "+listOfNotes)
-    listOfNotes.forEach(function(n){
-    this.html1.push(("<li><div>"+n+"</div></li>"))
-    })
-
-    return listOfNotes;
+  noteListView.prototype.showHTML = function(listOfNotes) {
+      this.html1.push(listOfNotes)
+      return("<ul><li>"+this.html1[0]+"</li></ul>")
   };
 
   exports.noteListView = noteListView;
