@@ -2,18 +2,26 @@ function UnitTestSuite() {
     noteSearch = "My favourite language is JavaScript"
     var note = new singleNote(noteSearch);
     var notelist = new noteList();
-    notelist.notes.push(note.showText());
+    // notelist.notes.push(note.showText());
 
     function savesNoteToNotes() {
-      assert.isTrue(notelist.notes == noteSearch)
+      notelist.saveNote(note);
+      assert.isTrue(notelist.notes.includes(note))
       if (assert){console.log("savesNoteToNotes: PASSED!!!!")};
     };
 
     savesNoteToNotes();
 
+    function showsListOfNotes(){
+      assert.isTrue(notelist.showNote()[0] == note)
+      if (assert){console.log("showsListOfNotes: PASSED!!!!")};
+    }
+
+    showsListOfNotes();
+
+
     function findTextInNote() {
-      notelist.aNote(noteSearch)
-      assert.isTrue(notelist.notes.includes(noteSearch))
+      assert.isTrue(notelist.findANote(noteSearch) == note)
       if (assert){console.log("findTextInNote: PASSED!!!!")};
     };
 

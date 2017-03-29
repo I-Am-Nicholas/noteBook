@@ -5,13 +5,17 @@
   };
 
   noteList.prototype.showNote = function() {
-    this.notes.push(singleNote);
+    //  console.log(this.notes)
     return this.notes;
   };
 
-  noteList.prototype.aNote = function(words) {
-      this.notes.forEach(function(x){
-       if (x == words) {return x} 
+  noteList.prototype.saveNote = function(note){
+    this.notes.push(note);
+  };
+
+  noteList.prototype.findANote = function(words) {
+    return this.notes.find(function(x){
+       return x.text == words
       })
   }
   exports.noteList = noteList;
