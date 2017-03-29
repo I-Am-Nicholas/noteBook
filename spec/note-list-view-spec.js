@@ -4,9 +4,7 @@ function listNotes() {
   var notelist = new noteList();
   var viewNotes = new noteListView();
 
-  notelist.notes.push(notelist.saveNote());
-
-  assert.isTrue(viewNotes.showHTML("My other favourite language is Ruby") == "<ul><li>My other favourite language is Ruby</li></ul>");
+  assert.isTrue(viewNotes.showHTML("My other favourite language is Ruby")[0] == '<ul><li>My other favourite language is Ruby</li></ul>');
   if (assert){console.log("listNotes: PASSED!!!")};
 };
 
