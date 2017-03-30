@@ -19,7 +19,7 @@ function listSingleNote() {
   function listNotes() {
       //Notebook containing multipls notes.
       var noteRB = new singleNote("My other favourite language is Ruby");
-      var noteJS = new singleNote("My other favourite language is JacaScript");
+      var noteJS = new singleNote("My other favourite language is JavaScript");
       var notelist = new noteList();
 
       notelist.newNote(noteRB);

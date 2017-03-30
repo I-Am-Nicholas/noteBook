@@ -10,8 +10,7 @@
     var noteToHtml = this.html1[0].map(function(noteText){
       return noteText.text;
     });
-
-    return ("<ul><li><div>"+noteToHtml.join("</div></li><div><li>")+ "</div></li></ul>")
+    return ("<ul><li><div>"+noteToHtml.join("</div></li><li><div>")+ "</div></li></ul>")
   };
 
   exports.noteListView = noteListView;
