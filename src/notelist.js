@@ -5,7 +5,6 @@
   };
 
   noteList.prototype.showNote = function() {
-    // console.log(this.notes);
     return this.notes;
   };
 

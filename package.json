@@ -1,0 +1,22 @@
+{
+  "name": "notebook",
+  "version": "1.0.0",
+  "description": "- Building a pure JavaScript application using my own testing framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marudine/noteBook.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marudine/noteBook/issues"
+  },
+  "homepage": "https://github.com/marudine/noteBook#readme",
+  "dependencies": {
+    "http-server": "^0.9.0"
+  }
+}
