@@ -1,17 +1,36 @@
-function listNotes() {
-  // var noteJS = new singleNote("My favourite language is JavaScript");
-  var noteRB = new singleNote("My other favourite language is Ruby");
-  var notelist = new noteList();
+function listSingleNote() {
+    //Notebook containing one note.
+    var noteRB = new singleNote("My other favourite language is Ruby");
+    var notelist = new noteList();
 
-  notelist.newNote(noteRB);
+    notelist.newNote(noteRB);
 
-  nlm = notelist.showNote();
+    nlm = notelist.showNote();
+    var viewNotes = new noteListView(nlm);
 
-  var viewNotes = new noteListView(nlm);
-
-  assert.isTrue(viewNotes.showHTML()[0] == '<ul><li>My other favourite language is Ruby</li></ul>');
-  if (assert){console.log("listNotes: PASSED!!!")}
+    assert.isTrue(viewNotes.showHTML() == '<ul><li><div>My other favourite language is Ruby</div></li></ul>');
+    if (assert){console.log("listNotes: PASSED!!!")}
 
 };
 
-  listNotes();
+  listSingleNote();
+
+
+  function listNotes() {
+      //Notebook containing multipls notes.
+      var noteRB = new singleNote("My other favourite language is Ruby");
+      var noteJS = new singleNote("My other favourite language is JacaScript");
+      var notelist = new noteList();
+
+      notelist.newNote(noteRB);
+      notelist.newNote(noteJS);
+
+      nlm = notelist.showNote();
+      var viewNotes = new noteListView(nlm);
+
+      assert.isTrue(viewNotes.showHTML() == '<ul><li><div>My other favourite language is Ruby</div></li><li><div>My other favourite language is JavaScript</div></li></ul>');
+      if (assert){console.log("listNotes: PASSED!!!")}
+
+  };
+
+    listNotes();
