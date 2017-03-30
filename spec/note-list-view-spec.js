@@ -9,7 +9,7 @@ function listSingleNote() {
     var viewNotes = new noteListView(nlm);
 
     assert.isTrue(viewNotes.showHTML() == '<ul><li><div>My other favourite language is Ruby</div></li></ul>');
-    if (assert){console.log("listNotes: PASSED!!!")}
+    if (assert){console.log("listSingleNotes: PASSED!!!")}
 
 };
 
@@ -17,7 +17,7 @@ function listSingleNote() {
 
 
   function listNotes() {
-      //Notebook containing multipls notes.
+      //Notebook containing multiple notes.
       var noteRB = new singleNote("My other favourite language is Ruby");
       var noteJS = new singleNote("My other favourite language is JavaScript");
       var notelist = new noteList();
@@ -34,3 +34,18 @@ function listSingleNote() {
   };
 
     listNotes();
+
+
+    function listNoNotes() {
+      //Notebook contains no notes.
+        var notelist = new noteList();
+
+        nlm = notelist.showNote();
+        var viewNotes = new noteListView(nlm);
+
+        assert.isTrue(viewNotes.showHTML() == '<ul><li><div></div></li></ul>');
+        if (assert){console.log("listNoNotes: PASSED!!!")}
+
+    };
+
+      listNoNotes();
