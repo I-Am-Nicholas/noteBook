@@ -10,7 +10,7 @@ noteControllerTest();
 
 function getHtmlReturnsHtmlList() {
   function MockElement() {
-    this.innerHTML = " "
+    this.innerHTML = "MOCKING!"
   }
 
   var mock = new MockElement()
@@ -27,5 +27,4 @@ function getHtmlReturnsHtmlList() {
 
   assert.isTrue(mock.innerHTML == string)
 }
-
 getHtmlReturnsHtmlList()

@@ -9,8 +9,8 @@
   };
 
   noteList.prototype.newNote = function(note){
-    this.note = note
-    this.notes.push(this.note);
+    // this.note = note
+    this.notes.push(note);
   };
 
   noteList.prototype.findANote = function(words) {
