@@ -1,4 +1,4 @@
-function noteControllerTest (){
+function noteControllerTest() {
   var string = "ThreeHoursSleep!"
   var noteCon = new NoteController(string);
 
@@ -9,14 +9,14 @@ function noteControllerTest (){
 noteControllerTest();
 
 function getHtmlReturnsHtmlList() {
-  function MockElement() {
+  function mockElement() {
     this.innerHTML = "MOCKING!"
   }
 
-  var mock = new MockElement()
+  var mock = new mockElement()
   var list = new noteList()
-
-  list.newNote("Favourite food: pesto")
+  var note = new singleNote("Favourite food: pesto")
+  list.newNote(note)
 
   var noteCon = new NoteController(list)
   var view = noteCon.createNoteListView()
@@ -26,5 +26,7 @@ function getHtmlReturnsHtmlList() {
 
 
   assert.isTrue(mock.innerHTML == string)
-}
+  if (assert){console.log("getHtmlReturnsHtmlList: PASSED!!!!")};
+};
+
 getHtmlReturnsHtmlList()

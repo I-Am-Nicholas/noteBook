@@ -11,10 +11,7 @@
 
   NoteController.prototype.getHTML = function(object, element = document.getElementById("app")){
     var element = element;
-     console.log(element.innerHTML)
     element.innerHTML = object.showHTML();
-    // console.log(object.showHTML())
-     console.log(element)
   }
 
 exports.NoteController = NoteController;
