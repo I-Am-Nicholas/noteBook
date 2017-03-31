@@ -1,11 +1,13 @@
-// var notelist = new noteList();
-//
-// var seltzerNote = notelist.showNote();
-//
-// var noteCon = new NoteController(seltzerNote);
-//
-// notelist.newNote("Favourite drink: seltzer");
-//
-// noteCon.createNoteListView();
-//
-// noteCon.getHTML();
+var note = new singleNote("Favourite drink: seltzer")
+
+var notelist = new noteList();
+
+
+var noteCon = new NoteController(notelist);
+
+
+notelist.newNote(note);
+
+var view = noteCon.createNoteListView();
+
+noteCon.getHTML(view);
