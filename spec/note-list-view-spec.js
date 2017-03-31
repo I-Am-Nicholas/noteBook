@@ -5,10 +5,9 @@ function listSingleNote() {
 
     notelist.newNote(noteRB);
 
-    nlm = notelist.showNote();
+    var nlm = notelist.showNote();
     var viewNotes = new noteListView(nlm);
-
-    assert.isTrue(viewNotes.showHTML() == '<ul><li><div>My other favourite language is Ruby</div></li></ul>');
+    assert.isTrue(viewNotes.showHTML() == "<ul><li><div>My other favourite language is Ruby</div></li></ul>");
     if (assert){console.log("listSingleNotes: PASSED!!!")}
 
 };
@@ -27,7 +26,6 @@ function listSingleNote() {
 
       nlm = notelist.showNote();
       var viewNotes = new noteListView(nlm);
-
       assert.isTrue(viewNotes.showHTML() == '<ul><li><div>My other favourite language is Ruby</div></li><li><div>My other favourite language is JavaScript</div></li></ul>');
       if (assert){console.log("listNotes: PASSED!!!")}
 
