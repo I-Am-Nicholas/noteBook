@@ -16,7 +16,7 @@
   noteList.prototype.findANote = function(words) {
     return this.notes.find(function(x){
        return x.text == words
-      })
+    })
   }
   exports.noteList = noteList;
 })(this);

@@ -5,7 +5,7 @@
   };
 
   singleNote.prototype.showText = function() {
-    return this.text
+    return this.text;
   };
 
   exports.singleNote = singleNote;

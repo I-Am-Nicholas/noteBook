@@ -1,11 +1,17 @@
 (function(exports){
-  function GetDiv() {
-    var element = document.getElementById("app");
-    element.innerHTML = "howdy";
-    console.log(element)
+
+  function NoteController(noteListObj){
+    this.noteListObj = noteListObj;
   }
 
-exports.GetDiv = GetDiv
-})(this);
+  NoteController.prototype.createNoteListView = function(){
+    this.noteListView = new noteListView(this.noteListObj);
+}
 
-GetDiv();
+  NoteController.prototype.getHTML = function(){
+    var element = document.getElementById("app");
+    element.innerHTML = this.noteListView.showHTML();
+  }
+
+exports.NoteController = NoteController;
+})(this);
