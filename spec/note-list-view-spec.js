@@ -4,12 +4,12 @@ function listSingleNote() {
     var notelist = new noteList();
 
     notelist.newNote(noteRB);
+    // there was a variable that wasn't doing anything here so condensed
+    // this code
+    var viewNotes = new NoteListView(notelist);
 
-    var nlm = notelist.showNote();
-    var viewNotes = new NoteListView(nlm);
     assert.isTrue(viewNotes.showHTML() == "<ul><li><div>My other favourite language is Ruby</div></li></ul>");
     if (assert){console.log("listSingleNotes: PASSED!!!")}
-
 };
 
   listSingleNote();
@@ -24,11 +24,11 @@ function listSingleNote() {
       notelist.newNote(noteRB);
       notelist.newNote(noteJS);
 
-      nlm = notelist.showNote();
-      var viewNotes = new NoteListView(nlm);
+      // nlm = notelist.showNote(); // this is the one I removed in the
+      // test above
+      var viewNotes = new NoteListView(notelist);
       assert.isTrue(viewNotes.showHTML() == '<ul><li><div>My other favourite language is Ruby</div></li><li><div>My other favourite language is JavaScript</div></li></ul>');
       if (assert){console.log("listNotes: PASSED!!!")}
-
   };
 
     listNotes();
@@ -38,8 +38,9 @@ function listSingleNote() {
       //Notebook contains no notes.
         var notelist = new noteList();
 
-        nlm = notelist.showNote();
-        var viewNotes = new NoteListView(nlm);
+        // nlm = notelist.showNote(); // the createNoteListView function
+        //iterates through the notelist so you don't need to show the note
+        var viewNotes = new NoteListView(notelist);
 
         assert.isTrue(viewNotes.showHTML() == '<ul><li><div></div></li></ul>');
         if (assert){console.log("listNoNotes: PASSED!!!")}

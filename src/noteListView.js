@@ -5,8 +5,13 @@
   };
 
   NoteListView.prototype.showHTML = function() {
-    var noteToHtml = this.noteListModel.map(function(noteText){
-      return noteText.text;
+    // broke these down as variables so it was easier to see
+    // what was being mapped
+    var list = this.noteListModel
+    var notes = list.notes
+    var noteToHtml = notes.map(function(note){
+      console.log(note)
+      return note.text;
     });
 
     if (noteToHtml.length !== 0) {
