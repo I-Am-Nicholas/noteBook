@@ -1,10 +1,10 @@
 (function(exports){
 
-  function noteListView(noteListModel) {
+  function NoteListView(noteListModel) {
     this.noteListModel = noteListModel;
   };
 
-  noteListView.prototype.showHTML = function() {
+  NoteListView.prototype.showHTML = function() {
     var noteToHtml = this.noteListModel.map(function(noteText){
       return noteText.text;
     });
@@ -16,5 +16,5 @@
     }
 
   };
-  exports.noteListView = noteListView;
+  exports.NoteListView = NoteListView;
 })(this);

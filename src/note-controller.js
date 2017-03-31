@@ -4,14 +4,15 @@
     this.noteListObj = noteListObj;
   }
 
-//   NoteController.prototype.createNoteListView = function(){
-//     this.noteListView = new noteListView(this.noteListObj);
-// }
-//
-//   NoteController.prototype.getHTML = function(){
-//     var element = document.getElementById("app");
-//     element.innerHTML = this.noteListView.showHTML();
-//   }
-//
+  NoteController.prototype.createNoteListView = function(){
+    var noteListView = new NoteListView(this.noteListObj);
+    return noteListView
+}
+
+  NoteController.prototype.getHTML = function(object, element = document.getElementById("app")){
+    var element = element;
+    element.innerHTML = object.showHTML();
+  }
+
 exports.NoteController = NoteController;
 })(this);
